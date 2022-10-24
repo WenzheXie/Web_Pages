@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>奶茶官网-联系我们</title>
+		<link rel="stylesheet" type="text/css" href="css/contectUs.css">
+		<script src="js/info.js"></script>
+
+	</head>
+	<body>
+<header class="index_pageHeader">
+		<div class="index_container">
+			<div class="logo">
+				<a href="../index.html"><img src="../img/logo.jpg" alt="古茗茶饮logo"></a>
+			</div>
+			<div class="index_left">
+				<ul>
+					<li class="">
+						<a href="../index.html">
+							首页
+						</a>
+					</li>
+					<li class="">
+						<a href="../product/product.html">
+							热销产品
+						</a>
+					</li>
+					<li class="">
+						<a href="../join/index.html">
+							加盟合作
+						</a>
+					</li>
+					<li class="index_active">
+						<a href="">
+							联系我们
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="index_right">
+				<div class="index_thirdItem">
+					<span style="display: inline-block; position: relative;">
+						<img src="../img/wb.png" alt="二维码">
+					</span>
+					<div class="index_popup">
+						<img src="../img/qr-weibo.png" alt="古茗官方微博">
+						<p>古茗官方微博</p>
+					</div>
+				</div>
+				<div class="index_thirdItem">
+					<span>
+						<img src="../img/dy.png" alt="二维码">
+					</span>
+					<div class="index_popup">
+						<img src="../img/qr-douyin.png" alt="古茗抖音号">
+						<p>古茗抖音号</p>
+					</div>
+				</div>
+				<div class="index_thirdItem">
+					<span>
+						<img src="../img/xhs.png" alt="二维码">
+					</span>
+					<div class="index_popup">
+						<img src="../img/qr-xiaohongshu.png" alt="古茗小红书">
+						<p>古茗小红书</p>
+					</div>
+				</div>
+				<div class="index_thirdItem">
+					<span>
+						<img src="../img/wx.png" alt="二维码">
+					</span>
+					<div class="index_popup">
+						<img src="../img/qr-gongzhonghao.jpg" alt="古茗公众号">
+						<p>古茗公众号</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="style_container1">
+			<div class="style_poster">
+				<img src="../img/image.jpg" alt="首页海报">
+			</div>
+		</div>
+		
+		<div class="contectUs">
+			<div class="contectUs_whole">
+			<div class="contectUs_Header">
+				<div class="contectUs_Header_img">
+					<img src="img/contectUs.jpg" alt="">
+				</div>
+				<div class="contectUs_Header_text">
+					Contect Us
+				</div>
+			</div>
+			<div class="content">
+				<div class="form" >
+					<center>
+				<form action="" method="get">
+					<table>
+						<tr>
+							<td><p>姓&nbsp;&nbsp;名：</p></td>
+							<td><input type="text" name="name" id="name" class="txt"></td>
+						</tr>
+						<tr>
+							<td><p>性&nbsp;&nbsp;别：</p></td>
+							<td>
+								<input type="radio" name="sex" id="male" value="male" class="rad">&nbsp;男&nbsp;&nbsp;&nbsp;
+								<input type="radio" name="sex" id="female" value="female" class="rad">&nbsp;女&nbsp;&nbsp;&nbsp;
+								<input type="radio" name="sex" id="other" value="other" class="rad">&nbsp;其他
+							</td>
+						</tr>
+						<tr>
+							<td><p>所在地区：</p></td>
+							<td>
+								<select name="province" id="province" οnchange="getCity()">
+									<option value="">省份</option>
+									 <!-- 利用js把省份添加到下拉列表里-->
+									   <script type="text/javascript"> 
+										for(var i=0;i<provinceArr.length;i++)    
+										{
+											document.write("<option value='"+i+"'>"+provinceArr[i]+"</option>");
+										}
+										</script>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><p>联系方式：</p></td>
+							<td><input type="text" name="phone" id="phone" class="txt"></td>
+						</tr>
+						<tr>
+							<td><p>E-mail：</p></td>
+							<td><input type="text" name="phone" id="phone" class="txt" placeholder="例如:2776784890@qq.com"></td>
+						</tr>
+						<tr>
+							<td><p>想说的话：</p></td>
+							<td><textarea name="advice" id="advice" cols="22" rows="4" class="txtarea" placeholder="感谢您宝贵的建议!" style="border-bottom: 2px solid #000;"></textarea></td>
+						</tr>
+					</table>
+				
+				</form>
+				</center>
+				</div>
+			</div>
+			<div class="contectUs_footer">
+				<div class="contectUs_button">
+					<button>提交</button>
+				</div>
+			</div>
+		</div>
+		</div>
+	</main>
+	</body>
+	
+	<script>
+	          //当省份的选择发生变化时调用 该方法   将市县加载到下拉选择框
+	        function getCity()
+	    {
+	        //1.获取省份选择框的对象
+	        var provincesobj=document.getElementById("province");
+	        //2.获取市县选择框的对象
+	        var cityobj=document.getElementById("city");
+	        //3.获取被选择的省份的索引
+	        var index=provincesobj.selectedIndex;
+	        
+	        //alert(provincesobj[index].value+","+provincesobj[index].text);
+	        4.通过省份的索引获取它的value值，value值也是它在数组的索引值
+	        var value=provincesobj[index].value;;
+	        
+	        //5.获取对应省份的市县数组
+	        var cityName=cityArr[value];
+	        //6.将下拉框清楚索引为0之后的，只保留第一个
+	        cityobj.length=1;
+	        //通过循环遍历市县元素给下拉框赋值
+	        for(var i=1;i<cityArr[value].length;i++)
+	        {
+	            cityobj.options[cityobj.options.length]=new Option(cityName[i],i);
+	            
+	        }
+	        
+	    }
+	 
+	</script>
+</html>
