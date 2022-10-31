@@ -181,7 +181,11 @@ a {
   bottom: 0;
   right: 0;
   display: block;
+  width: 100%;
 }
+
+
+
 .style_container1 .style_descContainer {
   background-color: #fff;
   border-radius: 30px;
@@ -190,11 +194,13 @@ a {
   margin: 0 8.3vw;
   z-index: 1;
   padding: 4vw 7vw;
+
 }
 .style_container1 .style_descContainer > h2 {
   font-weight: 600;
   color: #000;
   font-size: 40px;
+    width: 100%;
 }
 .style_container1 .style_descContainer .style_introduce .style_left {
   padding-right: 10.3vw;
