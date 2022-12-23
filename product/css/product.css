@@ -368,3 +368,14 @@ img{
 	height: 35px;
 	cursor: pointer;
 }
+@media screen and (max-width:768px) {
+	.index_right {
+		display:none;
+	}
+}
+
+@media screen and (max-width:1178px) {
+	.style_right {
+		display:none;
+	}
+}

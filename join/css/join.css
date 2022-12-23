@@ -699,3 +699,14 @@ a {
     padding: 0%;
     margin-top: -10px;
 }
+@media screen and (max-width:768px) {
+	.index_right {
+		display:none;
+	}
+}
+
+@media screen and (max-width:1178px) {
+	.style_right {
+		display:none;
+	}
+}

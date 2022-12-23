@@ -3,8 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>奶茶官网-联系我们</title>
-		<link rel="stylesheet" type="text/css" href="css/contectUs.css">
-		<script src="js/info.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/contactUs.css">
+		<script>
+			function myFunction() {
+			  alert("提交成功！");
+			}
+		</script>
 
 	</head>
 	<body>
@@ -81,7 +86,7 @@
 	<main>
 		<div class="style_container1">
 			<div class="style_poster">
-				<img src="../img/image.jpg" alt="首页海报">
+				<img src="../img/image1.jpg" alt="首页海报">
 			</div>
 		</div>
 		
@@ -92,7 +97,7 @@
 					<img src="img/contectUs.jpg" alt="">
 				</div>
 				<div class="contectUs_Header_text">
-					Contect Us
+					Contact Us
 				</div>
 			</div>
 			<div class="content">
@@ -133,22 +138,22 @@
 						</tr>
 						<tr>
 							<td><p><svg t="1667215337515" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2028" width="18" height="18"><path d="M801.142 232h-579.04l289.52 299.86L801.142 232zM136 234.963V792h752V234.18L534.643 600.157a32 32 0 0 1-0.794 0.794c-12.714 12.275-32.972 11.92-45.248-0.794L136 234.963zM96 160h832c17.673 0 32 14.327 32 32v640c0 17.673-14.327 32-32 32H96c-17.673 0-32-14.327-32-32V192c0-17.673 14.327-32 32-32z" fill="#5090F1" p-id="2029"></path></svg>&nbsp;E-mail：</p></td>
-							<td><input type="text" name="phone" id="phone" class="txt" placeholder="例如:2776784890@qq.com"></td>
+							<td><input type="email" name="email" id="email" class="txt" placeholder="例如:2776784890@qq.com"></td>
 						</tr>
 						<tr>
 							<td><p>想说的话：</p></td>
 							<td><textarea name="advice" id="advice" cols="22" rows="4" class="txtarea" placeholder="感谢您宝贵的建议!" style="border-bottom: 2px solid #000;"></textarea></td>
 						</tr>
 					</table>
-				
+					<div class="contectUs_button">
+						<input id="button" onclick="myFunction()" type="submit" >
+					</div>
 				</form>
 				</center>
 				</div>
 			</div>
 			<div class="contectUs_footer">
-				<div class="contectUs_button">
-					<button>提交</button>
-				</div>
+				
 			</div>
 		</div>
 		</div>
@@ -182,6 +187,5 @@
 	        }
 	        
 	    }
-	 
 	</script>
 </html>

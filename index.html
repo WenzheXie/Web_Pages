@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>奶茶品牌官网</title>
+	<link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="index.css">
-    <script type="text/javascript" src="p2/jquery-3.6.0.min.js"></script>
-	<script type="text/javascript" src="f.js"></script>
+	<script src="https://s1.pstatp.com/cdn/expire-1-M/jquery/1.10.2/jquery.min.js"></script>
+	<script src="rotation_chart.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
     <header class="index_pageHeader">
@@ -34,7 +35,7 @@
 						</a>
 					</li>
 					<li class="">
-						<a href="contectUs/index.html">
+						<a href="contactUs/index.html">
 							联系我们
 						</a>
 					</li>
@@ -88,7 +89,8 @@
 				<p>ONE CUP A DAY ALWAYS ENJOY IT</p>
 			</div>
 			<div class="style_poster">
-				<img src="./img/image.jpg" alt="首页海报">
+				<img class="img-slide img1" src="./img/image1.jpg" alt="首页海报">
+				<img class="img-slide img2" src="./img/image2.jpg" alt="">
 			</div>
 			<div class="style_descContainer">
 				<h2>古茗茶饮</h2>
@@ -123,41 +125,62 @@
 				<div class="index_productTable">
 					<div class="index_productTableCell">
 						<div class="index_productTableCellContent">
+							<a href="detail_page1/index.html" style="color: #000000; text-decoration: none;">
 							<div class="index_productTableCellContentImg"><img src="img/paoluda.png" alt=""></div>
 							<div class="index_productTableCellContentTitle">古茗泡鲁达</div>
 							<div class="index_productTableCellContentInfo"><p>吃蘸泡捞吸，一起泡出趣！</p><p>清甜泰国香椰水，6种小料巨丰富</p></div>
+							</a>
 						</div>
 					</div>
 					
 					<div class="index_productTableCell">
 						<div class="index_productTableCellContent">
+							<a href="detail_page2/index.html" style="color: #000000; text-decoration: none;">
 							<div class="index_productTableCellContentImg"><img src="img/xiguayeye.png" alt=""></div>
 							<div class="index_productTableCellContentTitle">西瓜椰椰</div>
 							<div class="index_productTableCellContentInfo"><p>夏日神仙水，椰椰回归</p><p>椰香更浓·泰好喝了椰</p></div>
+							</a>
 						</div>
 					</div>
 					
 					<div class="index_productTableCell">
 						<div class="index_productTableCellContent">
+							<a href="detail_page3/index.html" style="color: #000000; text-decoration: none;">
 							<div class="index_productTableCellContentImg"><img src="img/zhishilongjing.png" alt=""></div>
 							<div class="index_productTableCellContentTitle">芝士龙井香</div>
 							<div class="index_productTableCellContentInfo"><p>真茶沏泡，清新豆香</p><p>本味龙井香，饮尽江南绿</p></div>
+							</a>
 						</div>
 					</div>
 					<div class="index_productTableCell">
 						<div class="index_productTableCellContent">
+							<a href="detail_page4/index.html" style="color: #000000; text-decoration: none;">
 							<div class="index_productTableCellContentImg"><img src="img/zhishiputao.png" alt=""></div>
 							<div class="index_productTableCellContentTitle">超A芝士葡萄</div>
 							<div class="index_productTableCellContentInfo"><p>爆汁夏黑，优鲜开剥</p><p>一年卖出超过4千万杯</p></div>
+							</a>
 						</div>
 					</div>
-					
 					
 				</div>
 			</div>
 		</div>
 	</main>
-
 </body>
+<script type="text/javascript">
+    var index=0;
+    //效果
+    function ChangeImg() {
+        index++;
+        var a=document.getElementsByClassName("img-slide");
+        if(index>=a.length) index=0;
+        for(var i=0;i<a.length;i++){
+            a[i].style.display='none';
+        }
+        a[index].style.display='block';
+    }
+    //设置定时器，每隔两秒切换一张图片
+    setInterval(ChangeImg,2000);
+</script>
 
 </html>

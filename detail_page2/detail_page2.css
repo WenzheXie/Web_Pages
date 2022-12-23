@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Source Han Sans CN,Tahoma,Arial,sans-serif;
+}
+body, html {
+  background-color: #f6f5f0;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Source Han Sans CN,Tahoma,Arial,sans-serif;
+}
+li, ol, ul {
+  list-style: none;
+}
+.index_pageHeader {
+  position: fixed;
+  height: 86px;
+  width: 100%;
+  line-height: 56px;
+  padding: 15px 5%;
+  background-color: #fff;
+  z-index: 11;
+}
+.index_pageHeader .index_container {
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  display: flex;
+}
+
+.logo img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+    margin: 13px;
+	box-sizing: border-box;
+    padding: 0px;
+	border: none;
+	display: inline-block;
+    width: 130px;
+    height: 60px;
+}
+.index_left{
+	flex: 1 1;
+	position: absolute;
+	left: 130px;
+	
+}
+.index_pageHeader .index_container .index_left ul {
+  display: inline-block;
+  line-height: 56px;
+  vertical-align: top;
+  margin: 0;
+}
+.index_pageHeader .index_container .index_left ul li {
+  display: inline-block;
+}
+.index_pageHeader .index_container .index_left ul li.index_active a {
+  color: #c1af88;
+}
+.index_pageHeader .index_container .index_left ul li.index_active a:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #c1af88;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+.index_pageHeader .index_container .index_left ul li a {
+  line-height: 56px;
+  vertical-align: top;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 20px;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+.index_pageHeader .index_container .index_right {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  height: 36px;
+  line-height: 36px;
+  flex: 1 1;
+}
+.index_pageHeader .index_container .index_right .index_thirdItem {
+  display: inline-block;
+  position: relative;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.index_pageHeader .index_container .index_right .index_thirdItem >span >img{
+  position: relative;
+  left: -4px;
+}
+.index_pageHeader .index_container .index_right .index_thirdItem .index_popup {
+  position: absolute;
+  width: 102px;
+  height: 120px;
+  bottom: -137px;
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #000;
+  left: -32px;
+  z-index: 5;
+  background-color: #fff;
+  opacity: 0;
+  transform: translate3d(0,-10%,0);
+  transition: all .2s ease;
+}
+.index_pageHeader .index_container .index_right .index_thirdItem:hover .index_popup {
+  opacity: 1;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.index_pageHeader .index_container .index_right .index_thirdItem .index_popup::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 30px;
+  background: #000;
+  top: -1px;
+  left: 50%;
+  transform: translate3d(-50%,-100%,0);
+}
+.index_pageHeader .index_container .index_right .index_thirdItem .index_popup > img {
+  width: 92px;
+  margin: 5px 5px 0;
+  display: block;
+}
+.index_pageHeader .index_container .index_right .index_thirdItem .index_popup p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  line-height: 20px;
+}
+.container1{
+	position: absolute;
+	top: 86px;
+	width: 60%;
+}
+.image1{
+	width: 100%;
+}
+.container2{
+	position: absolute;
+	top: 100px;
+	right: 0%;
+	width: 40%;
+	text-align: center;
+}
+.container2.title{
+	line-height: 140%;
+}
+.container2 p{
+	line-height: 180%;
+}
+.container3{
+	position: absolute;
+	top: 260px;
+	left: 64%;
+	width: 40%;
+	text-align: left;
+}
+.container3 p{
+	line-height: 180%;
+}
+.container3 p span{
+	background-color: #FFCC66;
+	margin: 0 5px;
+	padding: 1px 8px;
+	width: 100px;
+	height: 100px;
+	border: 1px solid #000;
+	border-radius: 10px;
+}
+.container4{
+	position: absolute;
+	top: 200px;
+	right: 1%;
+	height: 50%;
+	z-index: -1;
+}
+.container4 img{
+	height: 100%;
+}
